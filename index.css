@@ -1,3 +1,7 @@
+* {
+    box-sizing: border-box;
+}
+
 body {
     margin: 0px;
     padding: 0px;
@@ -14,7 +18,8 @@ header {
 }
 
 .header-part {
-    width: 500px;
+    width: 100%;
+    display: flex;
     height: 100px;
     overflow: hidden;
     padding-left: 50px;
@@ -30,7 +35,7 @@ header {
 
 #header-logo-image {
     width: 260px;
-    height: 95px;
+    /* height: 95px; */
     object-fit: cover;
 }
 
@@ -90,9 +95,9 @@ a {
 /* first screen */
 #first-container {
     width: 100%;
-    max-width: 1500px;
+    max-width: 100%;
     height: 680px;
-    background-image: url('https://images.squarespace-cdn.com/content/v1/5ce2706bb542a40001d1c3f7/1567129958406-9OYHNK42YTGAJZL5N8NC/Edlyn+Bone+Roasters13821.jpg?format=2500w');
+    background-image: url('images/steak.jpeg');
     background-repeat: no-repeat;
     background-size: cover;
     display: flex;
@@ -246,7 +251,7 @@ a {
 input {
     width: 100%;
     height: 40px;
-    border: none;
+    border: 1px solid #67676793;
     border-radius: 10px;
     text-align: start;
     background-color: rgba(12, 11, 11, 0.90);
@@ -260,21 +265,26 @@ input {
     margin: 0px 0px 8px 0px;
 }
 
-input::-webkit-outer-spin-button,
-input::-webkit-inner-spin-button {
+/* removing arrows for number inputs */
+input::-webkit-inner-spin-button,
+input::-webkit-outer-spin-button {
     -webkit-appearance: none;
-    margin: 0;
 }
 
 .date-time-picker::-webkit-calendar-picker-indicator {
     background-color: rgba(217, 217, 217, 0.788);
     cursor: pointer;
+    border-radius: 2px;
+}
+
+input:focus {
+    border-color: rgb(255, 28, 247);
 }
 
 
 /* footer */
 .footer-container {
-    height: 230px;
+    height: 260px;
     background-color: rgb(17, 18, 18);
     display: flex;
     justify-content: center;
@@ -330,4 +340,23 @@ input::-webkit-inner-spin-button {
 
 h2 {
     letter-spacing: 1px;
+}
+
+
+
+
+
+
+
+
+
+@media (max-width: 1108px) {
+    header {
+        font-size: 12px;
+    }
+    #header-logo-image {
+        width: 150px;
+        height: 100px;
+    }
+
 }

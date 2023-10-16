@@ -20,6 +20,10 @@ scrollDownBtn.addEventListener('click', function() {
     });
 });
 
+const inputField = document.querySelector('input');
+inputField.addEventListener('focus', function() {
+    inputField.style.borderColor('red');
+})
 
 
 
